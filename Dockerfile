@@ -10,5 +10,5 @@ RUN apk add --no-cache bash git docker curl nc && \
     rm -rf Bluemix_CLI && \
     ibmcloud config --check-version=false && \
     ibmcloud plugin install kubernetes-service && \
-    ibmcloud plugin install container-registry
-    # cleanup
+    ibmcloud plugin install container-registry && \
+    ibmcloud plugin install doi
