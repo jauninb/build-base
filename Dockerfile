@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk add --update netcat-openbsd && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache bash git docker curl
+RUN apk add --no-cache bash git docker curl jq
  
     # kubectl
 RUN curl --location https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl --output /usr/local/bin/kubectl && \
