@@ -2,6 +2,9 @@ FROM alpine:latest
 
 RUN apk add --update netcat-openbsd && rm -rf /var/cache/apk/*
 
+# To have a decent base64 command
+RUN apk add --update coreutils
+
 RUN apk add --no-cache bash git docker curl jq
  
     # kubectl
